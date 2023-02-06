@@ -1,5 +1,13 @@
 applications:
   - appRoot: apps/app1
-    customHeaders: *headers
+    customHeaders:
+    - pattern: '**/*'
+      headers:
+        - key: 'Access-Control-Allow-Origin'
+          value: '*'
   - appRoot: apps/app2
-    customHeaders: *headers
+    customHeaders:
+    - pattern: '/path/*.json'
+      headers:
+      - key: 'Access-Control-Allow-Origin'
+        value: '*'
