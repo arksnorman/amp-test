@@ -1,5 +1,13 @@
 applications:
-  - appRoot: app1
-    customHeaders: *headers
-  - appRoot: app2
-    customHeaders: *headers
+  - appRoot: apps/app1
+    customHeaders:
+    - pattern: '**/*'
+      headers:
+      - key: 'custom-header-name-1'
+        value: 'custom-header-value-1'
+  - appRoot: apps/app2
+    customHeaders:
+    - pattern: '/path/*.json'
+      headers:
+      - key: 'custom-header-name-2'
+        value: 'custom-header-value-2'
