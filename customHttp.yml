@@ -1,7 +1,5 @@
-customHeaders:
-  - pattern: '*.json'
-    headers:
-    - key: 'custom-header-name-1'
-      value: 'custom-header-value-1'
-    - key: 'custom-header-name-2'
-      value: 'custom-header-value-2'
+applications:
+  - appRoot: app1
+    customHeaders: *headers
+  - appRoot: app2
+    customHeaders: *headers
