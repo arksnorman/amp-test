@@ -1,13 +1,13 @@
 applications:
-  - appRoot: apps/app1/
+  - appRoot: apps/app1
     customHeaders:
     - pattern: '**/*'
       headers:
-        - key: 'Access-Control-Allow-Origin'
-          value: '*'
+      - key: 'NormanTest1 Header KEY'
+        value: 'NormanTest1 Header Value'
   - appRoot: apps/app2
     customHeaders:
-    - pattern: '/path/*.json'
+    - pattern: '**/*'
       headers:
-      - key: 'Access-Control-Allow-Origin'
-        value: '*'
+      - key: 'NormanTest1 Header KEY'
+        value: 'NormanTest1 Header Value'
